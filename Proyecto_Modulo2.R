@@ -174,3 +174,201 @@ vector2 <- c(10,11,12,13,14,15)
 result <- array(c(vector1,vector2),dim = c(3,3,2))
 print(result)
 rm(list=ls())
+
+install.packages('class')
+library(class)
+
+
+iris
+# x's: Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+# y's: Species
+
+set.seed(1)
+0.8*nrow(iris)
+
+sample(x = 1:nrow(iris), size = 0.8*nrow(iris)
+
+random <- sample(x = 1:nrow(iris), size = 0.8*nrow(iris))
+random
+
+iris_train <- iris[random, -5]
+iris_train <- iris[]
+predict <- knn
+
+install.packages("ggplot2")
+library(ggplot2)
+
+diamonds <- as.data.frame(diamonds)
+
+str(diamonds)
+nrow(diamonds)*0.8
+sample(x = 1:nrow(diamonds), size = 0.8*nrow(diamonds))
+diamonds
+random <- sample(x = 1:nrow(diamonds), size = 0.8*nrow(diamonds))
+random
+diamonds_train <- diamonds[random, Sesion_9_samples]
+diamonds_train
+diamonds <- select(diamonds$cut'')
+
+diamonds <- diamondsfilter(['cut','depth','table','x','y','z'], axis=1)
+                             
+              
+diamonds_test <- diamonds[-random, Sesion_9_samples]
+
+Sesion_9_samples <- c(5, 6, 8, 9, 10)
+Sesion_9_cathegory <- 2
+
+diamonds_cathegory_train <- diamonds[random, Sesion_9_cathegory]
+diamonds_cathegory_test <- diamonds[-random, Sesion_9_cathegory]
+diamonds_test
+
+
+predict <- knn(train = diamonds_train,
+               test = diamonds_test,
+               cl = diamonds_cathegory_train,
+               k = 3)
+
+predict
+
+con_mat <-table(predict, diamonds_cathegory_test)
+Diagonal <- diag(con_mat)
+str(diamonds_cathegory_test)
+con_mat
+dim(con_mat)
+Total_train <- colSums(con_mat, )
+sum(Total_train)
+sum(Diagonal)
+Resultado_final <- sum(Diagonal)/sum(Total_train)*100
+sum(Resultado_final)
+
+install.packages("DBI")
+
+Mydatabase <- dbConnect(
+                    drv = RMySQL::MySQL(),
+                    dbname = "Postwork",
+                    host = "127.0.0.1",
+                    username = "root",
+                    password = "Ginette!986")
+
+MyDataBase <- dbConnect(
+  drv = RMySQL::MySQL(),
+  dbname = "shinydemo",
+  host = "shiny-demo.csa7qlmguqrf.us-east-1.rds.amazonaws.com",
+  username = "guest",
+  password = "guest")
+
+install.packages("odbc")
+library(DBI)
+
+MyDataBase <- dbConnect(
+                        drv = RMySQL::MySQL(),
+                        dbname = "shinydemo",
+                        host = "shiny-demo.csa7qlmguqrf.us-east-1.rds.amazonaws.com",
+                        username = "guest",
+                        password = "guest")
+
+install.packages("dbmss")
+library(dbmss)
+?dbConnect
+
+data <- iris
+data.sample <- sample(x = nrow(iris), size = 30)
+data.sample2 <- sample(x = nrow(iris), size = 30)
+data.sample3 <- sample(x = nrow(iris), size = 30)
+data.sample4 <- sample(x = nrow(iris), size = 30)
+data.sample5 <- sample(x = nrow(iris), size = 30)
+data.sample6 <- sample(x = nrow(iris), size = 30)
+data.sample7 <- sample(x = nrow(iris), size = 30)
+data.sample8 <- sample(x = nrow(iris), size = 30)
+data.sample9 <- sample(x = nrow(iris), size = 30)
+data.sample10 <- sample(x = nrow(iris), size = 30)
+data.sample
+Media_Prework <- mean(data)
+Media_Prework
+dim(sample)
+Sample_1 <- data[data.sample, 2]
+mean(Sample_1)
+Sample_2 <- data[data.sample3, 1]
+mean(Sample_2)
+
+str(data)
+install.packages("boot")
+
+
+OperacionSQL
+OperacionSQL.Proveedor
+library(ggplot2)
+library(dplyr)
+library(modeest)
+
+OperacionSQL.Proveedor <- OperacionSQL %>%
+  group_by(Pais_de_Origen) %>%
+  summarise(Total = sum(Total),
+            Unidades_vendidas = sum(Quantity),
+            Precio = sum(UnitPrice),
+            Importadores = n_distinct(Pais_Venta)) %>%
+  arrange(desc(Importadores))
+
+OperacionSQL.Pais_Venta <- OperacionSQL %>%
+  group_by(Pais_Venta) %>%
+  summarise(Total = sum(Total),
+            Unidades_vendidas = sum(Quantity),
+            Precio = sum(UnitPrice),
+            Ordenes = n_distinct(Id),
+            Proveedores = n_distinct(Proveedor),
+            Mayor_exportador = mfv(Pais_de_Origen)) %>%
+  arrange(desc(Total))
+OperacionSQL.Pais_Venta
+
+OperacionSQL.USA <- OperacionSQL %>% 
+  filter(Pais_Venta == 'USA') %>%
+select(ProductName, Id, Total, Pais_de_Origen)
+
+OperacionSQL.USA
+
+library(ggplot2)
+library(RColorBrewer)
+install.packages('RColorBrewer')
+display.brewer.all()
+co <- unique(OperacionSQL.USA$Pais_de_Origen)
+grafica1 <- ggplot(OperacionSQL.USA, aes(y = Total, x = Pais_de_Origen))
+grafica5 <- grafica4 + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+grafica2 <- grafica1 + geom_bar(stat='identity', width = 1, fill = '#00008B')
+grafica3 <- grafica2 + ggtitle('Importaciones a USA')
+grafica4 <- grafica3 + scale_y_continuous(breaks = seq(0,70000,10000))
+grafica5
+
+co
+grafica 1 <- ggplot(OperacionSQL.USA, aes(x = OperacionSQL.Producto$ProductName, y = OperacionSQL.Producto$Total))
+vis + geom_bar(aes(fill=class), width = 0.5) + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+ggplot(data = OperacionSQL, aes)
+OperacionSQL.Producto$ProductName
+str(Operacion_SQL)
+unique(Operacion_SQL$ProductName)
+OperacionSQL.Producto
+OperacionSQL.Proveedor
+write.csv(OperacionSQL.Producto, file = 'OperacionSQL.Producto.csv')
+diamonds
+summary(OperacionSQL)
+
+xa <- c(2, 3, 10, 5, 6, 7, 8)
+xa
+OperacionSQL.ggplot <- OperacionSQL[,xa]
+OperacionSQL.ggplot
+OperacionSQL.ProductoII <- OperacionSQL.Producto[20:60,]
+OperacionSQL.ProductoII
+grafica1 <- ggplot(OperacionSQL.ProductoII, aes(OperacionSQL.ProductoII$))
+grafica1
+grafica1 <- ggplot(OperacionSQL.ggplot, aes(Pais_Venta))
+grafica2<- grafica1 + geom_bar(aes(fill=ProductName), width = 5)                                        
+grafica2
+last_plot()
+ggsave(grafica2.png, width = 30, height = 30)
+plot(grafica2)
+
+vis <- ggplot(mpg, aes(manufacturer))
+vis + geom_bar(aes(fill=class), width = 5) + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+
+str(OperacionSQL)
